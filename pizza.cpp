@@ -12,13 +12,12 @@ vector<int> sum_p(int m,int n,vector<int> s){
         curr.clear();
         c=s[i];
         curr.push_back(i);
-        //cout<<s[i]<<"    ";
         if(c>m) continue;
         if(c==m) {
             sol=curr;
             curr.clear();
             return sol;
-        }
+                 }
        
         for(int j=n-1;j>=0 && i!=j;j--){
             c+=s[j];
@@ -26,25 +25,26 @@ vector<int> sum_p(int m,int n,vector<int> s){
             if(c>m){
                 c-=s[j];
                 continue;
-            }
+                   }
             curr.push_back(j);
-             //cout<<s[i]<<" "<<c<<endl;
             if(c==m){
                 sol=curr;
                 curr.clear();
                 return sol;
-            }
+                   }
         }
      if(c>sum){
          sum=c;
          sol=curr;
          curr.clear();
-     }
+        }
        
     }
    
     return sol;
 }
+
+
 void printsol(vector<int> sol){
     sort(sol.begin(),sol.end());
    ofstream ans;
