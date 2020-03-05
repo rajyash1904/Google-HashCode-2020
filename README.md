@@ -1,2 +1,2 @@
 # Google-HashCode-2020
-Practice Problem Solution.
+Practice Problem Solution in c++.
